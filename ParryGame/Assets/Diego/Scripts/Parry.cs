@@ -11,7 +11,7 @@ public class Parry : MonoBehaviour
     {
         StartCoroutine(DeactivateParryArea());
 
-        Collider2D[] collisionsArray = Physics2D.OverlapCircleAll(gameObject.transform.position, 2.1f);
+        Collider2D[] collisionsArray = Physics2D.OverlapCircleAll(playerScript.transform.position, 2f);
         foreach (Collider2D c in collisionsArray)
         {
             if (c.gameObject.CompareTag("Parryable"))
@@ -26,6 +26,18 @@ public class Parry : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        Collider2D[] collisionsArray = Physics2D.OverlapCircleAll(playerScript.transform.position, 2f);
+        foreach (Collider2D c in collisionsArray)
+        {
+            if (c.gameObject.CompareTag("Parryable"))
+            {
+                collisionList.Add(c);
+            }
+        }
+    }
+
     private void OnDisable()
     {
         collisionList.Clear();
@@ -35,16 +47,30 @@ public class Parry : MonoBehaviour
     {
         foreach (Collider2D c in collisionList)
         {
-            if (!c.GetComponent<ParryableScript>().parried)
+            if (c != null)
             {
-                c.GetComponent<ParryableScript>().Redirect(parryDirection);
+                if (!c.GetComponent<ParryableScript>().parried)
+                {
+                    c.GetComponent<ParryableScript>().Redirect(parryDirection);
+                }
             }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, 2);
     }
 
     IEnumerator DeactivateParryArea()
     {
         yield return new WaitForSeconds(.05f);
+        if (collisionList.Count > 0)
+        {
+            ParryObject(playerScript.GetParryDirection());
+        }
         gameObject.SetActive(false);
     }
+
+    
 }

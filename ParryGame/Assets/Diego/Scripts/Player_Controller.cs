@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class Player_Controller : MonoBehaviour
 {
+    public static Player_Controller instance;
+
     [SerializeField]
     private float speed = 17;
     [SerializeField]
@@ -39,6 +41,15 @@ public class Player_Controller : MonoBehaviour
 
     private void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+
         initialGravity = Physics2D.gravity;
         rb = GetComponent<Rigidbody2D>();
         parryScript = GetComponent<Parry>();
