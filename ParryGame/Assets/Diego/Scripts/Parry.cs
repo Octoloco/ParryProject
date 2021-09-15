@@ -4,56 +4,47 @@ using UnityEngine;
 
 public class Parry : MonoBehaviour
 {
-    public bool upDir;
-    public bool downDir;
-    public bool leftDir;
-    public bool rightDir;
+    public Player_Controller playerScript;
+    private List<Collider2D> collisionList = new List<Collider2D>();
 
-    public List<GameObject> bulletsEnetered;
-   
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnEnable()
     {
-        bulletsEnetered = new List<GameObject>();
+        StartCoroutine(DeactivateParryArea());
 
-        bulletsEnetered.Add(other.gameObject);
-
-        foreach (GameObject b in bulletsEnetered) {
-
-            if (other.tag == "Bullet")
+        Collider2D[] collisionsArray = Physics2D.OverlapCircleAll(gameObject.transform.position, 2.1f);
+        foreach (Collider2D c in collisionsArray)
+        {
+            if (c.gameObject.CompareTag("Parryable"))
             {
-                if (upDir)
-                {
-                    other.transform.rotation = Quaternion.Euler(0, 0, -90);
-                    upDir = false;
-                    other.tag = "ParriedBullet";
-                    GetComponent<CircleCollider2D>().enabled = false;
-                }
-                else if (downDir)
-                {
-                    
-                    other.transform.rotation = Quaternion.Euler(0, 0, 90);
-                    downDir = false;
-                    other.tag = "ParriedBullet";
-                    GetComponent<CircleCollider2D>().enabled = false;
-                }
-                else if (leftDir)
-                {
-                    other.transform.rotation = Quaternion.Euler(0, 0, 0);
-                    leftDir = false;
-                    other.tag = "ParriedBullet";
-                    GetComponent<CircleCollider2D>().enabled = false;
-                }
-                else if (rightDir)
-                {
-                    other.transform.rotation = Quaternion.Euler(0, 0, 180);
-                    rightDir = false;
-                    other.tag = "ParriedBullet";
-                    GetComponent<CircleCollider2D>().enabled = false;
-                }
+                collisionList.Add(c);
             }
+        }
 
-            
+        if (collisionList.Count > 0)
+        {
+            ParryObject(playerScript.GetParryDirection());
         }
     }
 
+    private void OnDisable()
+    {
+        collisionList.Clear();
+    }
+
+    private void ParryObject(Vector2 parryDirection)
+    {
+        foreach (Collider2D c in collisionList)
+        {
+            if (!c.GetComponent<ParryableScript>().parried)
+            {
+                c.GetComponent<ParryableScript>().Redirect(parryDirection);
+            }
+        }
+    }
+
+    IEnumerator DeactivateParryArea()
+    {
+        yield return new WaitForSeconds(.05f);
+        gameObject.SetActive(false);
+    }
 }
