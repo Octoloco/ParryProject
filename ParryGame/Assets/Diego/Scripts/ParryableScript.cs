@@ -12,7 +12,6 @@ public class ParryableScript : MonoBehaviour
         gameObject.layer = 6;
         float newRotation = DirToAngle(parryDirection);
         newRotation = newRotation * Mathf.Rad2Deg;
-        Debug.Log("angle = " + newRotation);
         transform.rotation = Quaternion.Euler(0, 0, newRotation);
     }
 

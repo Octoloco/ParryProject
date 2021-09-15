@@ -4,24 +4,26 @@ using UnityEngine;
 
 public class BulletSpawner : MonoBehaviour
 {
-    public float successTimer = 1f;
-    float actualTime = 0f;
+    public float spawnTime;
     public GameObject bullet;
     public GameObject spawner;
     // Start is called before the first frame update
     void Start()
     {
-        
+        spawnTime = Random.Range(.8f, 1.8f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        actualTime += Time.deltaTime;
-        if (actualTime >= successTimer)
+        if (spawnTime > 0)
         {
-            actualTime = 0;
-            Instantiate(bullet, spawner.transform.position, Quaternion.identity);
+            spawnTime -= Time.deltaTime;
+        }
+        else
+        {
+            spawnTime = Random.Range(.8f, 1.8f);
+            Instantiate(bullet, spawner.transform.position, transform.rotation);
         }
     }
 }
