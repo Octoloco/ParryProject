@@ -11,9 +11,12 @@ public class SoundCollection : ScriptableObject
     [SerializeField] public float volume;
     public void PlayAudioClip(AudioSource source, int index)
     {
-        
-        source.clip = audioClips[index];
-        source.Play();
+        if(audioClips!=null&&audioClips.Count>0&&source!=null)
+        {
+            source.clip = audioClips[index];
+            source.Play();
+        }
+      
     }
 
     public void PlayOnDisable(int index, Transform transform)
@@ -21,5 +24,9 @@ public class SoundCollection : ScriptableObject
         AudioSource.PlayClipAtPoint(audioClips[index], transform.position);
         GameObject.Find("One shot audio").transform.SetParent(Camera.main.transform);
         
+    }
+    public void SetVolume(float newValue)
+    {
+        volume = newValue;
     }
 }

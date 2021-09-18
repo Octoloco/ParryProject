@@ -6,24 +6,24 @@ using UnityEngine.UI;
 public class SFXManager : MonoBehaviour
 {
     [SerializeField]
-    private SoundEvent sfxScript;
+    private SoundCollection sfxScript;
 
     [SerializeField]
     private Slider slider;
 
-    public static SFXManager instance;
+    //public static SFXManager instance;
 
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-        }
-    }
+    //private void Awake()
+    //{
+    //    if (instance == null)
+    //    {
+    //        instance = this;
+    //    }
+    //    else if (instance != this)
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
 
     private void Update()
     {
@@ -33,24 +33,30 @@ public class SFXManager : MonoBehaviour
         }
     }
 
-    public void PlayClip(int index)
+    public void Mute()
     {
-        sfxScript.PlayClipByIndex(index);
+       
+        slider.value = 0;
     }
 
-    public void PlayClipWithDelay(int index, float time)
-    {
-        StartCoroutine(WaitToPlay(time, index));
-    }
+    //public void PlayClip(int index)
+    //{
+    //    sfxScript.PlayClipByIndex(index);
+    //}
 
-    public void StopClip()
-    {
-        sfxScript.StopClip();
-    }
+    //public void PlayClipWithDelay(int index, float time)
+    //{
+    //    StartCoroutine(WaitToPlay(time, index));
+    //}
 
-    IEnumerator WaitToPlay(float time, int index)
-    {
-        yield return new WaitForSeconds(time);
-        sfxScript.PlayClipByIndex(index);
-    }
+    //public void StopClip()
+    //{
+    //    sfxScript.StopClip();
+    //}
+
+    //IEnumerator WaitToPlay(float time, int index)
+    //{
+    //    yield return new WaitForSeconds(time);
+    //    sfxScript.PlayClipByIndex(index);
+    //}
 }
