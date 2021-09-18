@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PiñataScript : MonoBehaviour
 {
+    public static PiñataScript instance;
+
     [SerializeField]
     private Transform[] quadrants;
     [SerializeField]
@@ -25,6 +27,18 @@ public class PiñataScript : MonoBehaviour
     private bool arrivedToQuadrant = false;
     private int growth = 0;
     private Vector3 scaleToVector;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
 
     void Start()
     {
