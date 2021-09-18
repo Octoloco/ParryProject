@@ -8,6 +8,7 @@ TagManager:
   - Floor
   - Parryable
   - Bullet
+  - Pinata
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - UI
   - Parried
   - Player
-  - 
-  - 
+  - Pinata
+  - Unparried
   - 
   - 
   - 
