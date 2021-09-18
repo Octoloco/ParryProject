@@ -12,7 +12,7 @@ public class Parallax : MonoBehaviour
     void Start()
     {
         character = Player_Controller.instance;
-        m_startPoint = 0;
+        m_startPoint = transform.position.x;
         m_lenght = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 

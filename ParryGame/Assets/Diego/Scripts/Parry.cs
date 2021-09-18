@@ -49,7 +49,7 @@ public class Parry : MonoBehaviour
         {
             if (c != null)
             {
-                if (!c.GetComponent<ParryableScript>().parried)
+                if (c.GetComponent<ParryableScript>().parryable)
                 {
                     c.GetComponent<ParryableScript>().Redirect(parryDirection);
                 }
@@ -65,10 +65,6 @@ public class Parry : MonoBehaviour
     IEnumerator DeactivateParryArea()
     {
         yield return new WaitForSeconds(.05f);
-        if (collisionList.Count > 0)
-        {
-            ParryObject(playerScript.GetParryDirection());
-        }
         gameObject.SetActive(false);
     }
 
