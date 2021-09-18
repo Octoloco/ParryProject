@@ -108,6 +108,7 @@ public class Player_Controller : MonoBehaviour
     {
         if (parry.ReadValue<Vector2>().magnitude > 0 && !parrying)
         {
+            animator.SetTrigger("parrying");
             StartParry();
         }
 
@@ -178,6 +179,7 @@ public class Player_Controller : MonoBehaviour
         {
             if (!wallDragFallReset)
             {
+                animator.SetBool("sliding", true);
                 pushOffDirection = movement.ReadValue<float>() * -1;
                 wallDragFallReset = true;
                 canJump = true;
@@ -189,6 +191,8 @@ public class Player_Controller : MonoBehaviour
         }
         else
         {
+            animator.SetBool("sliding", false);
+            pushOff = false;
             wallDragFallReset = false;
             Physics2D.gravity = initialGravity;
         }
@@ -203,6 +207,8 @@ public class Player_Controller : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
+            animator.SetBool("sliding", false);
+            pushOff = false;
             wallDragFallReset = false;
             Physics2D.gravity = initialGravity;
         }
