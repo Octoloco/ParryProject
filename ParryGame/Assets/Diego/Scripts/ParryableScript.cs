@@ -5,6 +5,7 @@ using UnityEngine;
 public class ParryableScript : MonoBehaviour
 {
     public bool parried = false;
+    public bool parryable = true;
 
     public void Redirect(Vector2 parryDirection)
     {

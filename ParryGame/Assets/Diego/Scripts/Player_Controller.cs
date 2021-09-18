@@ -40,6 +40,7 @@ public class Player_Controller : MonoBehaviour
     private bool parrying = false;
     private Animator animator;
     private SpriteRenderer renderer;
+    private bool falling;
 
     private void Awake()
     {
@@ -112,6 +113,15 @@ public class Player_Controller : MonoBehaviour
             StartParry();
         }
 
+        if (rb.velocity.y < 0)
+        {
+            falling = true;
+        }
+        else
+        {
+            falling = false;
+        }
+
         ParryCooldown();
         Animate();
     }
@@ -168,7 +178,11 @@ public class Player_Controller : MonoBehaviour
         else if (collision.gameObject.CompareTag("Platform"))
         {
             canJump = true;
-            transform.SetParent(collision.gameObject.transform);
+            if (falling)
+            {
+                
+                transform.SetParent(collision.gameObject.transform);
+            }
         }
     }
 

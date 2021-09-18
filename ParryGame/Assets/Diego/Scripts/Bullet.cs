@@ -35,6 +35,7 @@ public class Bullet : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = false;
         Destroy(GetComponent<Rigidbody2D>());
         explotion.Play();
+        GetComponent<SoundEvent>().PlayClip();
         StartCoroutine(DestroyBullet());
     }
 
