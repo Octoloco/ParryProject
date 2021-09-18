@@ -23,7 +23,17 @@ public class DestructiblePlatform : MonoBehaviour
         if (collision.transform.tag == "Player")
         {
             StartCoroutine(Shake());
-            Destroy(gameObject, timeToDestroy);
+            Invoke("Kill", timeToDestroy);
+            
         }
+    }
+
+    private void Kill()
+    {
+        if (GetComponentInChildren<Player_Controller>() != null)
+        {
+            GetComponentInChildren<Player_Controller>().gameObject.transform.SetParent(null);
+        }
+        Destroy(gameObject);
     }
 }
