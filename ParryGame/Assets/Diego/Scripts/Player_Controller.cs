@@ -38,6 +38,8 @@ public class Player_Controller : MonoBehaviour
     private bool canPushOff = false;
     private float pushOffDirection;
     private bool parrying = false;
+    private Animator animator;
+    private SpriteRenderer renderer;
 
     private void Awake()
     {
@@ -49,7 +51,8 @@ public class Player_Controller : MonoBehaviour
         {
             Destroy(this);
         }
-
+        renderer = GetComponentInChildren<SpriteRenderer>();
+        animator = GetComponentInChildren<Animator>();
         initialGravity = Physics2D.gravity;
         rb = GetComponent<Rigidbody2D>();
         parryScript = GetComponent<Parry>();
@@ -109,6 +112,39 @@ public class Player_Controller : MonoBehaviour
         }
 
         ParryCooldown();
+        Animate();
+    }
+
+    private void Animate()
+    {
+        if (movement.ReadValue<float>() > 0)
+        {
+            renderer.flipX = false;
+            animator.SetBool("running", true);
+        }
+        else if (movement.ReadValue<float>() < 0)
+        {
+            renderer.flipX = true;
+            animator.SetBool("running", true);
+        }
+        else
+        {
+            animator.SetBool("running", false);
+        }
+
+        if (rb.velocity.y > 0)
+        {
+            animator.SetBool("jumping", true);
+        }
+        else if (rb.velocity.y < 0)
+        {
+            animator.SetBool("jumping", false);
+            animator.SetBool("falling", true);
+        }
+        else
+        {
+            animator.SetBool("falling", false);
+        }
     }
 
     private void FixedUpdate()
@@ -128,7 +164,13 @@ public class Player_Controller : MonoBehaviour
         {
             canJump = true;
         }
+        else if (collision.gameObject.CompareTag("Platform"))
+        {
+            canJump = true;
+            transform.SetParent(collision.gameObject.transform);
+        }
     }
+
 
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -163,6 +205,10 @@ public class Player_Controller : MonoBehaviour
         {
             wallDragFallReset = false;
             Physics2D.gravity = initialGravity;
+        }
+        else if (collision.gameObject.CompareTag("Platform"))
+        {
+            transform.SetParent(null);
         }
     }
 

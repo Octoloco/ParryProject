@@ -5,6 +5,9 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed;
+    public ParticleSystem trail;
+    public ParticleSystem explotion;
+    private bool dead;
 
     void Start()
     {
@@ -13,7 +16,10 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.right * speed * Time.deltaTime);
+        if (!dead)
+        {
+            transform.Translate(Vector3.right * speed * Time.deltaTime);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -23,6 +29,18 @@ public class Bullet : MonoBehaviour
             collision.gameObject.GetComponent<PiñataScript>().Grow();
         }
 
+        trail.Stop();
+        dead = true;
+        GetComponent<BoxCollider2D>().enabled = false;
+        GetComponent<SpriteRenderer>().enabled = false;
+        Destroy(GetComponent<Rigidbody2D>());
+        explotion.Play();
+        StartCoroutine(DestroyBullet());
+    }
+
+    IEnumerator DestroyBullet()
+    {
+        yield return new WaitForSeconds(explotion.startLifetime);
         Destroy(gameObject);
     }
 }

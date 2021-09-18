@@ -9,6 +9,7 @@ TagManager:
   - Parryable
   - Bullet
   - Pinata
+  - Platform
   layers:
   - Default
   - TransparentFX

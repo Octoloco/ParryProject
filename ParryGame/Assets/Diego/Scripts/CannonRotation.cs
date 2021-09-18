@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class CannonRotation : MonoBehaviour
 {
-    private PiñataScript player;
+    private PiñataScript piñata;
 
     void Start()
     {
-        player = PiñataScript.instance;
+        piñata = PiñataScript.instance;
     }
 
     void Update()
     {
-        if (player != null)
+        if (piñata != null)
         {
-            Vector2 direction = (Vector2)player.transform.position - (Vector2)transform.position;
+            Vector2 direction = (Vector2)piñata.transform.position - (Vector2)transform.position;
             float newRotation = DirToAngle(direction);
             newRotation = newRotation * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, newRotation);

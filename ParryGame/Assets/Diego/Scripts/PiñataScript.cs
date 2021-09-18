@@ -104,7 +104,6 @@ public class PiñataScript : MonoBehaviour
         {
             transform.localScale = Vector3.Lerp(transform.localScale, transform.localScale + new Vector3(growth, growth, growth), growSpeed * Time.deltaTime);
         }
-        Debug.Log(scaleMagnitude);
     }
 
     public void Grow()
