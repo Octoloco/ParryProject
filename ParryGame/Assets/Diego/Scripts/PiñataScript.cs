@@ -128,6 +128,7 @@ public class PiñataScript : MonoBehaviour
 
     public void Explode()
     {
-        LevelLoader.instance.LoadSceneByIndex(SceneManager.GetActiveScene().buildIndex + 1);
+        LevelLoader.instance.LoadNextLevel();
+       // LevelLoader.instance.LoadSceneByIndex(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
