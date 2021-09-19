@@ -24,12 +24,16 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
-    public void LoadNextLevel(int time=0)
+    public void LoadNextLevel()
     {
-        StartCoroutine(LoadScene(time));
+        StartCoroutine(LoadNextScene());
     }
+    public void LoadSceneByIndex(int index)
+    {
 
-    private IEnumerator LoadLevel(int index)
+        StartCoroutine(LoadLevelByIndex(index));
+    }
+    private IEnumerator LoadLevelByIndex(int index)
     {
         foreach (Animator a in animatorsList)
         {
@@ -40,11 +44,15 @@ public class LevelLoader : MonoBehaviour
 
         SceneManager.LoadScene(index);
     }
-    IEnumerator LoadScene(float time)
+    IEnumerator LoadNextScene()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         int nextScene = currentScene + 1 >= SceneManager.sceneCount ? 0 : currentScene + 1;
-        yield return new WaitForSeconds(time);
+        foreach (Animator a in animatorsList)
+        {
+            a.SetTrigger("start");
+        }
+        yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(nextScene);
     }
 

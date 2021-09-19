@@ -16,11 +16,18 @@ public class TutorialController : MonoBehaviour
   
     
     int currentState = 0;
+    private void Start()
+    {
+        torret.gameObject.SetActive(false);
+        bell.gameObject.SetActive(false);
+        tutorialVisuals[0].SetActive(false);
+    }
     public void InitializeTorretTutorial()
     {
         torret.gameObject.SetActive(true);
         bell.gameObject.SetActive(true);
         tutorialVisuals[0].SetActive(true);
+        playerSpawn.transform.position = newPosition.position;
 
     }
     public void ChangeState()
