@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Diego/Levels/Level-5.unity
     guid: 4e714ef5b8c2857489f3bcd6b694e61f
+  - enabled: 1
+    path: Assets/Carlos/Scenes/FinalScene.unity
+    guid: da1a4d3a5407bf04d9d72afc42a86caf
   m_configObjects: {}
