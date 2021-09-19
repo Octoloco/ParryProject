@@ -142,7 +142,7 @@ Material:
     - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
     - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
     - _FaceColor: {r: 2, g: 2, b: 2, a: 1}
-    - _GlowColor: {r: 5.2464113, g: 0.8825796, b: 0, a: 1}
+    - _GlowColor: {r: 6.541818, g: 1.6971699, b: 5.38225, a: 1}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
@@ -160,11 +160,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: Gonzalo
+  m_Name: Eliza
   m_EditorClassIdentifier: 
-  hashCode: -1546458882
+  hashCode: 78547099
   material: {fileID: -1756582956038429238}
-  materialHashCode: 1699238814
+  materialHashCode: -445633189
   m_Version: 1.1.0
   m_SourceFontFileGUID: b6f593be5588bfe498b8dc509f3d992a
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: b6f593be5588bfe498b8dc509f3d992a,
