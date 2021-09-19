@@ -55,6 +55,7 @@ public class PausePanel : UIPanel
             if ((Input.GetButtonDown("accept") || Input.GetKeyDown(KeyCode.Space)) && UIManager.instance.GetMenuIndex() == 1)
             {
                 UIManager.instance.PlaySelectSound();
+                Destroy(GameObject.Find("Music"));
                 LevelLoader.instance.LoadSceneByIndex(1);
             }
         }

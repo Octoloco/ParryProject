@@ -18,16 +18,19 @@ public class MovablePlatform : MonoBehaviour
 
     void Update()
     {
-        Vector3 distanceVector = moveToPointTransform.position - transform.position;
-        if (distanceVector.magnitude > 0.05)
+        if (!UIManager.instance.gamePaused)
         {
-            transform.Translate(distanceVector.normalized * Time.deltaTime * speed);
-        }
-        else
-        {
-            Vector3 tempPos = moveToPointTransform.position;
-            moveToPointTransform.position = startingPos;
-            startingPos = tempPos;
+            Vector3 distanceVector = moveToPointTransform.position - transform.position;
+            if (distanceVector.magnitude > 0.05)
+            {
+                transform.Translate(distanceVector.normalized * Time.deltaTime * speed);
+            }
+            else
+            {
+                Vector3 tempPos = moveToPointTransform.position;
+                moveToPointTransform.position = startingPos;
+                startingPos = tempPos;
+            }
         }
     }
 }

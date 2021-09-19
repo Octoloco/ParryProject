@@ -91,6 +91,7 @@ public abstract class UIPanel : MonoBehaviour
             {
                 transform.GetChild(i).GetComponent<RectTransform>().localScale = Vector3.one;
             }
+            UIManager.instance.canChangeSelection = true;
             canGrow = false;
         }
     }
@@ -111,6 +112,7 @@ public abstract class UIPanel : MonoBehaviour
             {
                 transform.GetChild(i).GetComponent<RectTransform>().localScale = Vector3.zero;
             }
+            UIManager.instance.canChangeSelection = true;
             canShrink = false;
         }
     }

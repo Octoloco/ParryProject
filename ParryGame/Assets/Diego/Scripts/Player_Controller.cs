@@ -88,25 +88,28 @@ public class Player_Controller : MonoBehaviour
 
     private void Jump(InputAction.CallbackContext obj)
     {
-        if (wallDragFallReset)
+        if (!UIManager.instance.gamePaused)
         {
-            if (transform.position.x > 0)
+            if (wallDragFallReset)
             {
-                rb.AddForce(Vector2.left * wallPush);
+                if (transform.position.x > 0)
+                {
+                    rb.AddForce(Vector2.left * wallPush);
+                }
             }
-        }
 
-        if (pushOff)
-        {
-            pushOff = false;
-            canPushOff = true;
-        }
+            if (pushOff)
+            {
+                pushOff = false;
+                canPushOff = true;
+            }
 
-        if (canJump)
-        {
-            GetComponent<SoundEvent>().PlayClipByIndex(5);
-            canJump = false;
-            rb.velocity = new Vector2(rb.velocity.x, jumpVelocity);
+            if (canJump)
+            {
+                GetComponent<SoundEvent>().PlayClipByIndex(5);
+                canJump = false;
+                rb.velocity = new Vector2(rb.velocity.x, jumpVelocity);
+            }
         }
     }
 

@@ -19,7 +19,10 @@ public class RotateAroundPlatform : MonoBehaviour
 
     void Update()
     {
-        angle += speed * Time.deltaTime;
-        transform.position = new Vector3(rotateAroundPoint.position.x + radius * Mathf.Cos(angle), rotateAroundPoint.position.y + radius * Mathf.Sin(angle), 0);
+        if (!UIManager.instance.gamePaused)
+        {
+            angle += speed * Time.deltaTime;
+            transform.position = new Vector3(rotateAroundPoint.position.x + radius * Mathf.Cos(angle), rotateAroundPoint.position.y + radius * Mathf.Sin(angle), 0);
+        }
     }
 }
