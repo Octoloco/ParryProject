@@ -24,7 +24,12 @@ public class BulletSpawner : MonoBehaviour
         {
             GetComponentInParent<SoundEvent>().PlayClip();
             spawnTime = Random.Range(.8f, 1.8f);
-            Instantiate(bullet, spawner.transform.position, transform.rotation);
+            GetComponent<Animator>().SetTrigger("shoot");
         }
+    }
+
+    public void Shoot()
+    {
+        Instantiate(bullet, spawner.transform.position, transform.parent.transform.rotation);
     }
 }
