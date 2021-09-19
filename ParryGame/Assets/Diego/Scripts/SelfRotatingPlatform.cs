@@ -12,15 +12,18 @@ public class SelfRotatingPlatform : MonoBehaviour
 
     void Update()
     {
-        if (!rotateRight)
+        if (!UIManager.instance.gamePaused)
         {
-            mod = -1;
-        }
-        else
-        {
-            mod = 1;
-        }
+            if (!rotateRight)
+            {
+                mod = -1;
+            }
+            else
+            {
+                mod = 1;
+            }
 
-        transform.Rotate(Vector3.forward * speed * Time.deltaTime * mod);
+            transform.Rotate(Vector3.forward * speed * Time.deltaTime * mod);
+        }
     }
 }

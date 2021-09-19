@@ -7,7 +7,8 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
 
-    public bool gamePaused = false;
+    public bool gamePaused = true;
+    public bool canChangeSelection = true;
 
     [SerializeField]
     private MainMenuPanel mainMenuPanel;
@@ -39,15 +40,16 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        gamePaused = false;
+        gamePaused = true;
     }
 
     void Update()
     {
         if (SceneManager.GetActiveScene().buildIndex > 1)
         {
-            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetAxis("Submit") > 0)
+            if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetAxis("Submit") > .3) && canChangeSelection)
             {
+                canChangeSelection = false;
                 if (!pausePanel.isShowing)
                 {
                     gamePaused = true;
