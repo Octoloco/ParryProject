@@ -114,7 +114,7 @@ public class Player_Controller : MonoBehaviour
     {
         transform.rotation = Quaternion.Euler(Vector3.zero);
 
-        if (parry.ReadValue<Vector2>().magnitude > 0 && !parrying)
+        if (parry.ReadValue<Vector2>().magnitude > .3 && !parrying)
         {
             animator.SetTrigger("parrying");
             StartParry();
@@ -135,12 +135,12 @@ public class Player_Controller : MonoBehaviour
 
     private void Animate()
     {
-        if (movement.ReadValue<float>() > 0)
+        if (movement.ReadValue<float>() > .3)
         {
             renderer.flipX = false;
             animator.SetBool("running", true);
         }
-        else if (movement.ReadValue<float>() < 0)
+        else if (movement.ReadValue<float>() < -.3)
         {
             renderer.flipX = true;
             animator.SetBool("running", true);
@@ -167,7 +167,15 @@ public class Player_Controller : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(movement.ReadValue<float>() * speed, rb.velocity.y);
+        if (movement.ReadValue<float>() > .3 || movement.ReadValue<float>() < -.3)
+        {
+            rb.velocity = new Vector2(movement.ReadValue<float>() * speed, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+
         rb.velocity += new Vector2(0, Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime);
         if (canPushOff)
         {
@@ -262,7 +270,7 @@ public class Player_Controller : MonoBehaviour
             {
                 parryCooldownTimer -= Time.deltaTime;
             }
-            else if (GetParryDirection().magnitude <= 0)
+            else if (GetParryDirection().magnitude <= .3)
             {
                 GetComponent<SoundEvent>().PlayClipByIndex(4);
                 cooldownStart = false;

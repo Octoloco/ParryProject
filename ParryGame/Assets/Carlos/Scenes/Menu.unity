@@ -1399,6 +1399,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHidden: 1
   scaleFactor: 5
+  SFXSlider: {fileID: 312822771}
+  MusicSlider: {fileID: 1825222255}
+  sliderSpeed: 1
 --- !u!1 &645883842
 GameObject:
   m_ObjectHideFlags: 0
@@ -2289,7 +2292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 312822771}
-  collection: {fileID: 11400000, guid: 0bcfe128f33f3b74cb51217e2b64460f, type: 2}
+  collection: {fileID: 11400000, guid: dc8ecc55c2cddbe4087f5019355209fb, type: 2}
 --- !u!114 &1236886549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2302,7 +2305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907714238abd58b44ae8884c75bf8ac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxScript: {fileID: 11400000, guid: 0bcfe128f33f3b74cb51217e2b64460f, type: 2}
+  sfxScript: {fileID: 11400000, guid: dc8ecc55c2cddbe4087f5019355209fb, type: 2}
   slider: {fileID: 312822771}
 --- !u!1 &1338164715
 GameObject:
@@ -2370,8 +2373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907714238abd58b44ae8884c75bf8ac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxScript: {fileID: 11400000, guid: dc8ecc55c2cddbe4087f5019355209fb, type: 2}
-  slider: {fileID: 312822771}
+  sfxScript: {fileID: 11400000, guid: a28c3357da8ab0645a87e74dd535e0fc, type: 2}
+  slider: {fileID: 1825222255}
 --- !u!1 &1368769592
 GameObject:
   m_ObjectHideFlags: 0
@@ -3479,6 +3482,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuPanel: {fileID: 451833726}
   settingsPanel: {fileID: 571324178}
+  sfxSoundEvent: {fileID: 571324175}
+  sfxManager: {fileID: 1236886549}
+  musicManager: {fileID: 1338164718}
+  menuSelection: none
+  menuIndex: 0
 --- !u!1 &1825222253
 GameObject:
   m_ObjectHideFlags: 0
