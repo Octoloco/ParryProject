@@ -12,6 +12,7 @@ public class PressStartPanel : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
+            UIManager.instance.PlayStartSound();
             canShrink = true;
         }
 

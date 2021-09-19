@@ -99,6 +99,11 @@ public class UIManager : MonoBehaviour
         sfxSoundEvent.PlayClipByIndex(6);
     }
 
+    public void PlayStartSound()
+    {
+        sfxSoundEvent.PlayClipByIndex(8);
+    }
+
     public void PlaySelectSound()
     {
         sfxSoundEvent.PlayClipByIndex(7);
