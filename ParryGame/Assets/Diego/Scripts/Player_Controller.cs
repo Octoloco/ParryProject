@@ -116,7 +116,6 @@ public class Player_Controller : MonoBehaviour
 
         if (parry.ReadValue<Vector2>().magnitude > .3 && !parrying)
         {
-            animator.SetTrigger("parrying");
             StartParry();
         }
 
@@ -232,7 +231,14 @@ public class Player_Controller : MonoBehaviour
 
     public Vector2 GetParryDirection()
     {
-        return parry.ReadValue<Vector2>();
+        if (parry != null)
+        {
+            return parry.ReadValue<Vector2>();
+        }
+        else
+        {
+            return Vector2.zero;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -272,7 +278,6 @@ public class Player_Controller : MonoBehaviour
             }
             else if (GetParryDirection().magnitude <= .3)
             {
-                GetComponent<SoundEvent>().PlayClipByIndex(4);
                 cooldownStart = false;
                 parrying = false;
             }
@@ -286,6 +291,8 @@ public class Player_Controller : MonoBehaviour
         parryDirection = GetParryDirection();
         if (parryDirection.magnitude > 0)
         {
+            animator.SetTrigger("parrying");
+            GetComponent<SoundEvent>().PlayClipByIndex(4);
             parryArea.SetActive(true);
         }
         else
