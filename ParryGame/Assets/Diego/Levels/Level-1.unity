@@ -278,7 +278,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7791411, y: 1}
+    m_SensorSize: {x: 1.7775736, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -966,7 +966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionTime: 1
   animatorsList:
-  - {fileID: 0}
+  - {fileID: 260886926}
 --- !u!4 &410307938
 Transform:
   m_ObjectHideFlags: 0
