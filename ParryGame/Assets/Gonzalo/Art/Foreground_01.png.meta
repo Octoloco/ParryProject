@@ -96,6 +96,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -105,8 +106,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -676,6 +677,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Foreground_01_22: -9188229212033969640
+      Foreground_01_15: 1911304353791296094
+      Foreground_01_19: 8143356289727666296
+      Foreground_01_6: 651122691986461689
+      Foreground_01_1: 2164191410179063041
+      Foreground_01_0: -3931945996597227647
+      Foreground_01_17: -4495867590637545986
+      Foreground_01_13: 874085490535749810
+      Foreground_01_8: -6592406859996355628
+      Foreground_01_21: 1265690590279263398
+      Foreground_01_12: -3228521285167811089
+      Foreground_01_4: 6976650504531247350
+      Foreground_01_2: -6944223521824548044
+      Foreground_01_7: 2609467988750654067
+      Foreground_01_10: 5316860799034690840
+      Foreground_01_16: 7956568621444669128
+      Foreground_01_14: 4311741741630748312
+      Foreground_01_23: 8740912569904823500
+      Foreground_01_9: -102322654193715784
+      Foreground_01_5: -138233205614974097
+      Foreground_01_18: -3507509295381832526
+      Foreground_01_20: -8355384350965747850
+      Foreground_01_3: -2377621574503050543
+      Foreground_01_11: 5858880194167364691
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
