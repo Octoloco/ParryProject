@@ -166,13 +166,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.745
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
-  m_LightVolumeIntensityEnabled: 0
+  m_LightVolumeIntensityEnabled: 1
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
@@ -181,9 +182,9 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensityEnabled: 1
   m_ShadowIntensity: 0.75
-  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 0.75
   m_Vertices:
   - position: {x: 0.9985302, y: 0.9985302, z: 0}
@@ -278,7 +279,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7769784, y: 1}
+    m_SensorSize: {x: 1.4798658, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -564,21 +565,6 @@ PrefabInstance:
     - target: {fileID: 4449174238427216177, guid: 0f8ef5df735ecac4e94e3047ae9dc18e,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4449174238427216177, guid: 0f8ef5df735ecac4e94e3047ae9dc18e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4449174238427216177, guid: 0f8ef5df735ecac4e94e3047ae9dc18e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4449174238427216177, guid: 0f8ef5df735ecac4e94e3047ae9dc18e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1045,6 +1031,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SelfRotatingPlatform (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 226714560056006908, guid: 55627d1576d8a5448843d9ecfbdc046d,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 226714560056006908, guid: 55627d1576d8a5448843d9ecfbdc046d,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.45833334
+      objectReference: {fileID: 0}
     - target: {fileID: 226714560056006909, guid: 55627d1576d8a5448843d9ecfbdc046d,
         type: 3}
       propertyPath: speed
@@ -1100,13 +1096,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.745
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
-  m_LightVolumeIntensityEnabled: 0
+  m_LightVolumeIntensityEnabled: 1
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
@@ -1115,9 +1112,9 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensityEnabled: 1
   m_ShadowIntensity: 0.75
-  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 0.75
   m_Vertices:
   - position: {x: 0.9985302, y: 0.9985302, z: 0}
@@ -1458,26 +1455,106 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 130778720046683112, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 350234051105847277, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 579087977316676775, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 579087977316676775, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 579087977316676775, guid: 1707ffd15e983cb4e9f4791c634e78b4,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1125953490602990480, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1187384151315353311, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374380963492972580, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517238559765146382, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479364547636371396, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2489848787540485759, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2805607458684579001, guid: 1707ffd15e983cb4e9f4791c634e78b4,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.17
       objectReference: {fileID: 0}
-    - target: {fileID: 3883099878924892981, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+    - target: {fileID: 3042100146035064755, guid: 1707ffd15e983cb4e9f4791c634e78b4,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 3883099879140677475, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241123270437275498, guid: 1707ffd15e983cb4e9f4791c634e78b4,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+      propertyPath: parallaxEffect
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512225539181943007, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3545552504994811623, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719289416274010712, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883099878924892987, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883099879140677473, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883099879140677474, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3883099879788677381, guid: 1707ffd15e983cb4e9f4791c634e78b4,
         type: 3}
       propertyPath: m_RootOrder
@@ -1538,11 +1615,67 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackGround
       objectReference: {fileID: 0}
-    - target: {fileID: 3883099880068529410, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+    - target: {fileID: 3883099880068529408, guid: 1707ffd15e983cb4e9f4791c634e78b4,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883099880068529469, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931769205794496920, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320666918332778796, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6453389841513258318, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6474082002192572264, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6606948974140023408, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6788547932617311830, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798448379375509354, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828637623228938780, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: parallaxEffect
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475177659822016090, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7649204438295112952, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+      objectReference: {fileID: 4128064738326349207, guid: aefd65e519d87244681e3f91fc959002,
+        type: 3}
     - target: {fileID: 7649204438295112952, guid: 1707ffd15e983cb4e9f4791c634e78b4,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5355,13 +5488,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.745
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
-  m_LightVolumeIntensityEnabled: 0
+  m_LightVolumeIntensityEnabled: 1
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
@@ -5370,9 +5504,9 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensityEnabled: 1
   m_ShadowIntensity: 0.75
-  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 0.75
   m_Vertices:
   - position: {x: 0.9985302, y: 0.9985302, z: 0}
@@ -5580,13 +5714,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.745
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
-  m_LightVolumeIntensityEnabled: 0
+  m_LightVolumeIntensityEnabled: 1
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
@@ -5595,9 +5730,9 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensityEnabled: 1
   m_ShadowIntensity: 0.75
-  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 0.75
   m_Vertices:
   - position: {x: 0.9985302, y: 0.9985302, z: 0}
@@ -5785,6 +5920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
@@ -6101,11 +6237,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5534475094743865649, guid: 3aaca627f2d8cf74fb6a1c94abb8c498,
         type: 3}
-      propertyPath: m_Size.y
-      value: 1.0231712
-      objectReference: {fileID: 0}
-    - target: {fileID: 5534475094743865649, guid: 3aaca627f2d8cf74fb6a1c94abb8c498,
-        type: 3}
       propertyPath: m_Offset.y
       value: 0.011585623
       objectReference: {fileID: 0}
@@ -6113,6 +6244,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534475094743865651, guid: 3aaca627f2d8cf74fb6a1c94abb8c498,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8243
       objectReference: {fileID: 0}
     - target: {fileID: 5534475094743865652, guid: 3aaca627f2d8cf74fb6a1c94abb8c498,
         type: 3}
@@ -6899,21 +7035,6 @@ PrefabInstance:
     - target: {fileID: 993790021598570183, guid: f784754163a2cad4bb963a523278f944,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 993790021598570183, guid: f784754163a2cad4bb963a523278f944,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 993790021598570183, guid: f784754163a2cad4bb963a523278f944,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 993790021598570183, guid: f784754163a2cad4bb963a523278f944,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 993790021598570200, guid: f784754163a2cad4bb963a523278f944,
