@@ -38,7 +38,7 @@ public class SoundEvent : MonoBehaviour
     public void PlayClipByIndex(int index)
     {
        
-        collection.PlayAudioClip( source, index);
+        collection.PlayAudioClip(source, index);
     }
 
     public void PlayOnDisable(int index)
