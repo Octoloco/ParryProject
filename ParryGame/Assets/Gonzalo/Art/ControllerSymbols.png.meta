@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: b21317d6eb24b5c49a717f908bcf9e48
+guid: 10a4845e3e822e94a94aec008fa3a1f0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5280466425997615973
-    second: ParryBubble_0
+      213: 4263442570655157238
+    second: ControllerSymbols_A
   - first:
-      213: 1645623541451362833
-    second: ParryBubble_1
+      213: 8656691871756901325
+    second: ControllerSymbols_RS
   - first:
-      213: -8678430761460658219
-    second: ParryBubble_2
+      213: 1132248857496927720
+    second: ControllerSymbols_LS
   - first:
-      213: 2438124396616807279
-    second: ParryBubble_3
+      213: 2131715036048286050
+    second: ControllerSymbols_B
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 7
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,13 +103,55 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ParryBubble_0
+      name: ControllerSymbols_A
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbcd28ed6aca2b30800000000000000
+      internalID: 4263442570655157238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControllerSymbols_RS
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcbd41a646fb22870800000000000000
+      internalID: 8656691871756901325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControllerSymbols_LS
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 563e6f1cc3cf74940800000000000000
-      internalID: 5280466425997615973
+      spriteID: 8ed3274465e86bf00800000000000000
+      internalID: 1132248857496927720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ParryBubble_1
+      name: ControllerSymbols_B
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 0
-        width: 64
-        height: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,50 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1129a3e54ed66d610800000000000000
-      internalID: 1645623541451362833
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ParryBubble_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5df8057e335009780800000000000000
-      internalID: -8678430761460658219
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ParryBubble_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f63fe829835f5d120800000000000000
-      internalID: 2438124396616807279
+      spriteID: 261640ee78f559d10800000000000000
+      internalID: 2131715036048286050
       vertices: []
       indices: 
       edges: []

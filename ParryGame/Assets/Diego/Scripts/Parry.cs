@@ -9,8 +9,9 @@ public class Parry : MonoBehaviour
 
     private void OnEnable()
     {
-        StartCoroutine(DeactivateParryArea());
-
+        //StartCoroutine(DeactivateParryArea());
+        float angle = DirToAngle(playerScript.GetParryDirection()) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, angle - 90);
         Collider2D[] collisionsArray = Physics2D.OverlapCircleAll(playerScript.transform.position, 2f);
         foreach (Collider2D c in collisionsArray)
         {
@@ -45,6 +46,7 @@ public class Parry : MonoBehaviour
 
     private void ParryObject(Vector2 parryDirection)
     {
+        
         foreach (Collider2D c in collisionList)
         {
             if (c != null)
@@ -57,14 +59,15 @@ public class Parry : MonoBehaviour
         }
     }
 
+    public static float DirToAngle(Vector2 dir) => Mathf.Atan2(dir.y, dir.x);
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, 2);
     }
 
-    IEnumerator DeactivateParryArea()
+    public void DeactivateParryArea()
     {
-        yield return new WaitForSeconds(.05f);
         gameObject.SetActive(false);
     }
 

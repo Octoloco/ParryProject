@@ -278,7 +278,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7775736, y: 1}
+    m_SensorSize: {x: 1.7769784, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -326,13 +326,14 @@ GameObject:
   - component: {fileID: 171960963}
   - component: {fileID: 171960962}
   - component: {fileID: 171960964}
+  - component: {fileID: 171960965}
   m_Layer: 0
   m_Name: ParryArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &171960961
 Transform:
   m_ObjectHideFlags: 0
@@ -342,7 +343,7 @@ Transform:
   m_GameObject: {fileID: 171960960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.760982, y: 5.760982, z: 5.760982}
+  m_LocalScale: {x: 3.4248233, y: 3.4248233, z: 3.4248233}
   m_Children: []
   m_Father: {fileID: 1278899506}
   m_RootOrder: 1
@@ -362,7 +363,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.0000009536743}
   serializedVersion: 2
-  m_Radius: 2.1099997
+  m_Radius: 3.56
 --- !u!212 &171960963
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -383,7 +384,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -403,10 +404,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: 3b3758041e84ab74ba357afb6ede0aac,
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 2438124396616807279, guid: b21317d6eb24b5c49a717f908bcf9e48,
     type: 3}
-  m_Color: {r: 0.83137256, g: 0.78141326, b: 0.15294115, a: 0.35686275}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7529412}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -429,6 +430,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScript: {fileID: 1278899507}
+--- !u!95 &171960965
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171960960}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a116d9648bfd90f4da44cfc44d3dcabd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &193071793
 GameObject:
   m_ObjectHideFlags: 0
@@ -5308,6 +5328,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxGrowth: 1
+  onPassLevel:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &1045880983
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5791,6 +5814,10 @@ MonoBehaviour:
   jumpVelocity: 31
   parryCooldown: 0.1
   parryArea: {fileID: 171960960}
+  initialPosition: {fileID: 0}
+  onPlayerHit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1278899508
 Rigidbody2D:
   serializedVersion: 4
@@ -6514,7 +6541,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 9
   m_Sprite: {fileID: 1791904589581890566, guid: 168489ca35ae6b947b4fe585a39edcfa,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
