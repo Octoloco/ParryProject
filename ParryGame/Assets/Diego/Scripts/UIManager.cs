@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
 
+    public bool gamePaused = false;
+
     [SerializeField]
     private MainMenuPanel mainMenuPanel;
+    [SerializeField]
+    private PausePanel pausePanel;
     [SerializeField]
     private SettingsPanel settingsPanel;
     [SerializeField]
@@ -34,11 +39,31 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        
+        gamePaused = false;
     }
 
     void Update()
     {
+        if (SceneManager.GetActiveScene().buildIndex > 1)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetAxis("Submit") > 0)
+            {
+                if (!pausePanel.isShowing)
+                {
+                    gamePaused = true;
+                    menuSelection = "pause";
+                    pausePanel.isShowing = true;
+                    pausePanel.Show();
+                }
+                else
+                {
+                    gamePaused = false;
+                    menuSelection = "none";
+                    pausePanel.isShowing = false;
+                    pausePanel.Hide();
+                }
+            }
+        }
     }
 
     public void AddMenuIndex()

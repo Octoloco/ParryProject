@@ -16,15 +16,18 @@ public class BulletSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (spawnTime > 0)
+        if (!UIManager.instance.gamePaused)
         {
-            spawnTime -= Time.deltaTime;
-        }
-        else
-        {
-            GetComponentInParent<SoundEvent>().PlayClip();
-            spawnTime = Random.Range(.8f, 1.8f);
-            GetComponent<Animator>().SetTrigger("shoot");
+            if (spawnTime > 0)
+            {
+                spawnTime -= Time.deltaTime;
+            }
+            else
+            {
+                GetComponentInParent<SoundEvent>().PlayClip();
+                spawnTime = Random.Range(.8f, 1.8f);
+                GetComponent<Animator>().SetTrigger("shoot");
+            }
         }
     }
 

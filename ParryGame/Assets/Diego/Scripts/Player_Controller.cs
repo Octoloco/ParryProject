@@ -112,24 +112,27 @@ public class Player_Controller : MonoBehaviour
 
     private void Update()
     {
-        transform.rotation = Quaternion.Euler(Vector3.zero);
-
-        if (parry.ReadValue<Vector2>().magnitude > .3 && !parrying)
+        if (!UIManager.instance.gamePaused)
         {
-            StartParry();
-        }
+            transform.rotation = Quaternion.Euler(Vector3.zero);
 
-        if (rb.velocity.y < 0)
-        {
-            falling = true;
-        }
-        else
-        {
-            falling = false;
-        }
+            if (parry.ReadValue<Vector2>().magnitude > .3 && !parrying)
+            {
+                StartParry();
+            }
 
-        ParryCooldown();
-        Animate();
+            if (rb.velocity.y < 0)
+            {
+                falling = true;
+            }
+            else
+            {
+                falling = false;
+            }
+
+            ParryCooldown();
+            Animate();
+        }
     }
 
     private void Animate()
@@ -166,20 +169,23 @@ public class Player_Controller : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (movement.ReadValue<float>() > .3 || movement.ReadValue<float>() < -.3)
+        if (!UIManager.instance.gamePaused)
         {
-            rb.velocity = new Vector2(movement.ReadValue<float>() * speed, rb.velocity.y);
-        }
-        else
-        {
-            rb.velocity = new Vector2(0, rb.velocity.y);
-        }
+            if (movement.ReadValue<float>() > .3 || movement.ReadValue<float>() < -.3)
+            {
+                rb.velocity = new Vector2(movement.ReadValue<float>() * speed, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(0, rb.velocity.y);
+            }
 
-        rb.velocity += new Vector2(0, Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime);
-        if (canPushOff)
-        {
-            canPushOff = false;
-            rb.AddForce(new Vector2 (pushOffDirection * wallPush, 0), ForceMode2D.Impulse);
+            rb.velocity += new Vector2(0, Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime);
+            if (canPushOff)
+            {
+                canPushOff = false;
+                rb.AddForce(new Vector2(pushOffDirection * wallPush, 0), ForceMode2D.Impulse);
+            }
         }
     }
 

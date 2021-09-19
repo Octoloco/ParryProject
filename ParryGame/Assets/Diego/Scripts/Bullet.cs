@@ -16,9 +16,12 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        if (!dead)
+        if (!UIManager.instance.gamePaused)
         {
-            transform.Translate(Vector3.right * speed * Time.deltaTime);
+            if (!dead)
+            {
+                transform.Translate(Vector3.right * speed * Time.deltaTime);
+            }
         }
     }
 
