@@ -13,12 +13,77 @@ public class SettingsPanel : UIPanel
     [SerializeField]
     private float sliderSpeed;
 
+    [SerializeField]
+    private Sprite selectedButton;
+    [SerializeField]
+    private Sprite unselectedButton;
+
+    [SerializeField]
+    private Sprite selectedBar;
+    [SerializeField]
+    private Sprite unselectedBar;
+
+    [SerializeField]
+    private Sprite mutedSound;
+    [SerializeField]
+    private Sprite unmutedSound;
+
+    [SerializeField]
+    private Image musicBar;
+    [SerializeField]
+    private Image sfxBar;
+
+    [SerializeField]
+    private Image mutedMusicButton;
+    [SerializeField]
+    private Image mutedSFXButton;
+
+    [SerializeField]
+    private Image backButton;
+
     new private void Update()
     {
         base.Update();
 
         if (UIManager.instance.GetMenuSelection() == "settings")
         {
+            if (UIManager.instance.GetMenuIndex() == 0)
+            {
+                musicBar.GetComponent<Image>().sprite = selectedBar;
+                sfxBar.GetComponent<Image>().sprite = unselectedBar;
+                backButton.GetComponent<Image>().sprite = unselectedButton;
+            }
+            else if (UIManager.instance.GetMenuIndex() == 1)
+            {
+                musicBar.GetComponent<Image>().sprite = unselectedBar;
+                sfxBar.GetComponent<Image>().sprite = selectedBar;
+                backButton.GetComponent<Image>().sprite = unselectedButton;
+            }
+            else if (UIManager.instance.GetMenuIndex() == 2)
+            {
+                musicBar.GetComponent<Image>().sprite = unselectedBar;
+                sfxBar.GetComponent<Image>().sprite = unselectedBar;
+                backButton.GetComponent<Image>().sprite = selectedButton;
+            }
+
+            if (SFXSlider.value <= 0)
+            {
+                mutedSFXButton.sprite = mutedSound;
+            }
+            else
+            {
+                mutedSFXButton.sprite = unmutedSound;
+            }
+
+            if (MusicSlider.value <= 0)
+            {
+                mutedMusicButton.sprite = mutedSound;
+            }
+            else
+            {
+                mutedMusicButton.sprite = unmutedSound;
+            }
+
             if ((Input.GetAxis("Vertical") < -.3 || Input.GetKeyDown(KeyCode.S)) && canChangeSelection && UIManager.instance.GetMenuIndex() < 2)
             {
                 canChangeSelection = false;
