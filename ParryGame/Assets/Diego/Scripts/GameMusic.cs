@@ -12,7 +12,7 @@ public class GameMusic : MonoBehaviour
 
     IEnumerator waitToStart()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         GetComponent<SoundEvent>().PlayClip();
     }
 }

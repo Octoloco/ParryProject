@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
 
-    public bool gamePaused = false;
+    public bool gamePaused = true;
     public bool canChangeSelection = true;
 
     [SerializeField]
@@ -40,7 +40,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        gamePaused = false;
+        gamePaused = true;
     }
 
     void Update()
