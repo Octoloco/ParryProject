@@ -199,6 +199,7 @@ public class Player_Controller : MonoBehaviour
             }
         }else if(collision.gameObject.CompareTag("Parryable") || collision.gameObject.CompareTag("Damage"))
         {
+            GetComponent<SoundEvent>().PlayClipByIndex(9);
             onPlayerHit.Invoke();
         }
     }

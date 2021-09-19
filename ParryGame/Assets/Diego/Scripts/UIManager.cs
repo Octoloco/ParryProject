@@ -91,7 +91,7 @@ public class UIManager : MonoBehaviour
     {
         menuSelection = "none";
         menuIndex = 0;
-        LevelLoader.instance.LoadSceneByIndex(1);
+        LevelLoader.instance.LoadSceneByIndex(2);
     }
 
     public void PlayHoverSound()
