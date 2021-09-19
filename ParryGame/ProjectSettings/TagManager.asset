@@ -10,6 +10,7 @@ TagManager:
   - Bullet
   - Pinata
   - Platform
+  - Damage
   layers:
   - Default
   - TransparentFX

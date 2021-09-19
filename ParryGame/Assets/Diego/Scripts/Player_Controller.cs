@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class Player_Controller : MonoBehaviour
@@ -42,6 +43,9 @@ public class Player_Controller : MonoBehaviour
     private SpriteRenderer renderer;
     private bool falling;
 
+    [Header("On hit player variables")]
+    [SerializeField] Transform initialPosition;
+    public UnityEvent onPlayerHit;
     private void Awake()
     {
         if (instance == null)
@@ -183,6 +187,9 @@ public class Player_Controller : MonoBehaviour
                 
                 transform.SetParent(collision.gameObject.transform);
             }
+        }else if(collision.gameObject.CompareTag("Parryable") || collision.gameObject.CompareTag("Damage"))
+        {
+            onPlayerHit.Invoke();
         }
     }
 
@@ -219,6 +226,7 @@ public class Player_Controller : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
+        Debug.Log(collision.transform.tag);
         if (collision.gameObject.CompareTag("Wall"))
         {
             animator.SetBool("sliding", false);
@@ -274,5 +282,10 @@ public class Player_Controller : MonoBehaviour
         }
     }
 
-
+    public void TranslatePlayerToInitialPosition()
+    {
+        if (instance.transform.parent != null)
+            instance.transform.SetParent(null);
+        instance.transform.position = initialPosition.position;
+    }
 }

@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class PiñataScript : MonoBehaviour
 {
+
     public static PiñataScript instance;
 
     //[SerializeField]
@@ -27,7 +29,7 @@ public class PiñataScript : MonoBehaviour
     //private bool arrivedToQuadrant = false;
     private int growth = 0;
     //private Vector3 scaleToVector;
-
+    public UnityEvent onPassLevel;
     private void Awake()
     {
         if (instance == null)
@@ -111,13 +113,13 @@ public class PiñataScript : MonoBehaviour
         growth++;
         if (growth >= maxGrowth)
         {
-            Explode();
+            onPassLevel.Invoke();
         }
         //scaleToVector = transform.localScale + new Vector3(growthStep * growth, growthStep * growth, growthStep * growth);
         
     }
 
-    private void Explode()
+    public void Explode()
     {
         Destroy(gameObject);
     }
