@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-
+using UnityEditor.Experimental.TerrainAPI;
 
 [CustomEditor(typeof(SoundEvent))]
 public class SoundEventEditor : Editor
