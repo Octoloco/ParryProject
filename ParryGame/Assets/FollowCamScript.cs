@@ -20,7 +20,7 @@ public class FollowCamScript : MonoBehaviour
 
         if (player != null)
         {
-            if (playerScreenPoint.x < Camera.main.pixelWidth / 4 || playerScreenPoint.x > Camera.main.pixelWidth - (Camera.main.pixelWidth / 4))
+            if (playerScreenPoint.x < Camera.main.pixelWidth / 3 || playerScreenPoint.x > Camera.main.pixelWidth - (Camera.main.pixelWidth / 3))
             {
                 trackedDolly.Follow = player.transform;
             }
