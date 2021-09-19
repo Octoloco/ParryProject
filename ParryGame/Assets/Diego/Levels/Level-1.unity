@@ -169,7 +169,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7837838, y: 1}
+    m_SensorSize: {x: 1.7789292, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1071,105 +1071,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 130778720046683112, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: parallaxEffect
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 350234051105847277, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: parallaxEffect
-      value: -0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 579087977316676775, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 579087977316676775, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 579087977316676775, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+    - target: {fileID: 1008924012724730217, guid: 1707ffd15e983cb4e9f4791c634e78b4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.19
+      value: 0.98
       objectReference: {fileID: 0}
-    - target: {fileID: 1125953490602990480, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+    - target: {fileID: 2980508166787959505, guid: 1707ffd15e983cb4e9f4791c634e78b4,
         type: 3}
       propertyPath: parallaxEffect
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1187384151315353311, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: parallaxEffect
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1374380963492972580, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: parallaxEffect
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1517238559765146382, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: parallaxEffect
-      value: -0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2479364547636371396, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: parallaxEffect
-      value: -0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2489848787540485759, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: parallaxEffect
-      value: -0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2805607458684579001, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042100146035064755, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3241123270437275498, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: parallaxEffect
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3512225539181943007, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: parallaxEffect
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3545552504994811623, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: parallaxEffect
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3719289416274010712, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: parallaxEffect
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3883099878924892987, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3883099879140677473, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3883099879140677474, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: parallaxEffect
-      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3883099879788677381, guid: 1707ffd15e983cb4e9f4791c634e78b4,
         type: 3}
@@ -1231,77 +1141,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackGround
       objectReference: {fileID: 0}
-    - target: {fileID: 3883099880068529408, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+    - target: {fileID: 5438081591283387355, guid: 1707ffd15e983cb4e9f4791c634e78b4,
         type: 3}
-      propertyPath: m_IsActive
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7257249261906275694, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+        type: 3}
+      propertyPath: m_Intensity
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3883099880068529469, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+    - target: {fileID: 7257249261906275694, guid: 1707ffd15e983cb4e9f4791c634e78b4,
         type: 3}
-      propertyPath: parallaxEffect
-      value: -0.25
+      propertyPath: m_LightType
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 3931769205794496920, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+    - target: {fileID: 7257249261906275694, guid: 1707ffd15e983cb4e9f4791c634e78b4,
         type: 3}
-      propertyPath: parallaxEffect
-      value: -0.5
+      propertyPath: m_FalloffIntensity
+      value: 0.597
       objectReference: {fileID: 0}
-    - target: {fileID: 4320666918332778796, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+    - target: {fileID: 7257249261906275694, guid: 1707ffd15e983cb4e9f4791c634e78b4,
         type: 3}
-      propertyPath: parallaxEffect
-      value: -0.25
+      propertyPath: m_PointLightInnerRadius
+      value: 0.41
       objectReference: {fileID: 0}
-    - target: {fileID: 6453389841513258318, guid: 1707ffd15e983cb4e9f4791c634e78b4,
+    - target: {fileID: 7257249261906275694, guid: 1707ffd15e983cb4e9f4791c634e78b4,
         type: 3}
-      propertyPath: parallaxEffect
-      value: -0.25
+      propertyPath: m_PointLightOuterRadius
+      value: 11.15
       objectReference: {fileID: 0}
-    - target: {fileID: 6474082002192572264, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: parallaxEffect
-      value: -0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6606948974140023408, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: parallaxEffect
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6788547932617311830, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: parallaxEffect
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6798448379375509354, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: parallaxEffect
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6828637623228938780, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: parallaxEffect
-      value: -0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7475177659822016090, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7649204438295112952, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 4128064738326349207, guid: aefd65e519d87244681e3f91fc959002,
-        type: 3}
-    - target: {fileID: 7649204438295112952, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 8967984485577815522, guid: 1707ffd15e983cb4e9f4791c634e78b4,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1707ffd15e983cb4e9f4791c634e78b4, type: 3}
 --- !u!1001 &831037469
@@ -20602,7 +20471,7 @@ MonoBehaviour:
   m_PathPosition: 0
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
-  m_XDamping: 2.5
+  m_XDamping: 0
   m_YDamping: 0
   m_ZDamping: 1
   m_CameraUp: 0
