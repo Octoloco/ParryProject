@@ -44,7 +44,7 @@ public class UIManager : MonoBehaviour
 
     public void StartGame()
     {
-        LevelLoader.instance.LoadNextLevel(1);
+        LevelLoader.instance.LoadNextLevel(0);
     }
 
     public void ShowGameOverPanel()

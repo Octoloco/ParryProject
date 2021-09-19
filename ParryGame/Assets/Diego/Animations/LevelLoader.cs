@@ -24,9 +24,9 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
-    public void LoadNextLevel(int index)
+    public void LoadNextLevel(int time=0)
     {
-        StartCoroutine(LoadLevel(index));
+        StartCoroutine(LoadScene(time));
     }
 
     private IEnumerator LoadLevel(int index)
@@ -39,6 +39,13 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(index);
+    }
+    IEnumerator LoadScene(float time)
+    {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        int nextScene = currentScene + 1 >= SceneManager.sceneCount ? 0 : currentScene + 1;
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene(nextScene);
     }
 
 

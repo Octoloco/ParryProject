@@ -44,6 +44,7 @@ public class PiñataScript : MonoBehaviour
 
     void Start()
     {
+        growth = 0;
         //currentQuadrant = quadrants[0];
     }
 
@@ -118,6 +119,7 @@ public class PiñataScript : MonoBehaviour
         //scaleToVector = transform.localScale + new Vector3(growthStep * growth, growthStep * growth, growthStep * growth);
         
     }
+
 
     public void Explode()
     {
