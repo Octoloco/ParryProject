@@ -511,7 +511,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127869529}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.68274, y: 1.0494828, z: 18.635693}
+  m_LocalPosition: {x: 14.572172, y: 1.0494828, z: 18.635693}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1622583212}
@@ -1388,7 +1388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370914229}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.68274, y: 1.0494828, z: 18.635693}
+  m_LocalPosition: {x: 14.572172, y: 1.0494828, z: 18.635693}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1626234501}
@@ -25977,6 +25977,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 230557812}
     m_Modifications:
+    - target: {fileID: 3123447907378017821, guid: 3aaca627f2d8cf74fb6a1c94abb8c498,
+        type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123447907378017821, guid: 3aaca627f2d8cf74fb6a1c94abb8c498,
+        type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 983
+      objectReference: {fileID: 0}
     - target: {fileID: 5534475094670442474, guid: 3aaca627f2d8cf74fb6a1c94abb8c498,
         type: 3}
       propertyPath: m_RootOrder
@@ -26036,6 +26046,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MovingPlatform
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534475094743865649, guid: 3aaca627f2d8cf74fb6a1c94abb8c498,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5534475094743865651, guid: 3aaca627f2d8cf74fb6a1c94abb8c498,
         type: 3}
@@ -26834,7 +26849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 904824283}
-  m_PathPosition: 0.44097176
+  m_PathPosition: 0.38097176
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 0
@@ -26846,7 +26861,7 @@ MonoBehaviour:
   m_RollDamping: 0
   m_AutoDolly:
     m_Enabled: 1
-    m_PositionOffset: 0.12
+    m_PositionOffset: 0.06
     m_SearchRadius: 2
     m_SearchResolution: 5
 --- !u!114 &1622583215
