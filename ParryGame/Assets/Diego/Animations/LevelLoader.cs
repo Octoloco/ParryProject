@@ -11,6 +11,7 @@ public class LevelLoader : MonoBehaviour
 
     [SerializeField]
     private Animator[] animatorsList;
+    const int maxScenes = 7;
 
     private void Awake()
     {
@@ -47,7 +48,9 @@ public class LevelLoader : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
-        int nextScene = currentScene + 1 >= SceneManager.sceneCount ? 0 : currentScene + 1;
+        int nextScene = currentScene + 1 >= maxScenes ? 0 : currentScene + 1;
+
+   
         foreach (Animator a in animatorsList)
         {
             a.SetTrigger("start");
