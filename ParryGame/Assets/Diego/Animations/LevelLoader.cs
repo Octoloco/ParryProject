@@ -11,7 +11,7 @@ public class LevelLoader : MonoBehaviour
 
     [SerializeField]
     private Animator[] animatorsList;
-    const int maxScenes = 7;
+    const int maxScenes = 8;
 
     private void Awake()
     {
