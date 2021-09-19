@@ -104,6 +104,7 @@ public class Player_Controller : MonoBehaviour
 
         if (canJump)
         {
+            GetComponent<SoundEvent>().PlayClipByIndex(5);
             canJump = false;
             rb.velocity = new Vector2(rb.velocity.x, jumpVelocity);
         }
@@ -111,6 +112,8 @@ public class Player_Controller : MonoBehaviour
 
     private void Update()
     {
+        transform.rotation = Quaternion.Euler(Vector3.zero);
+
         if (parry.ReadValue<Vector2>().magnitude > 0 && !parrying)
         {
             animator.SetTrigger("parrying");
@@ -261,6 +264,7 @@ public class Player_Controller : MonoBehaviour
             }
             else if (GetParryDirection().magnitude <= 0)
             {
+                GetComponent<SoundEvent>().PlayClipByIndex(4);
                 cooldownStart = false;
                 parrying = false;
             }
