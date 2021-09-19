@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PiñataScript : MonoBehaviour
 {
@@ -120,9 +121,13 @@ public class PiñataScript : MonoBehaviour
         
     }
 
+    public void LevelFinished()
+    {
+        GetComponent<Animator>().SetTrigger("hit");
+    }
 
     public void Explode()
     {
-        Destroy(gameObject);
+        LevelLoader.instance.LoadSceneByIndex(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

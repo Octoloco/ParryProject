@@ -244,7 +244,6 @@ public class Player_Controller : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        Debug.Log(collision.transform.tag);
         if (collision.gameObject.CompareTag("Wall"))
         {
             animator.SetBool("sliding", false);

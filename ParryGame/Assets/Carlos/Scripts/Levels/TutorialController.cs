@@ -36,7 +36,7 @@ public class TutorialController : MonoBehaviour
 
         if (currentState >= bellPosition.Length)
         {
-            onTutorialFinish.Invoke();
+            PiñataScript.instance.LevelFinished();
             return;
         }
         bell.transform.position = bellPosition[currentState].position;
