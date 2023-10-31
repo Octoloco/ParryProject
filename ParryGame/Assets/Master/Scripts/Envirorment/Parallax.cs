@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-<<<<<<< HEAD:ParryGame/Assets/Carlos/Scripts/Parallax.cs
-    [SerializeField] GameObject character;
-=======
     [SerializeField] Transform character;
->>>>>>> NewMain:ParryGame/Assets/Master/Scripts/Envirorment/Parallax.cs
     [SerializeField] float parallaxEffect;
 
     float m_startPoint;
@@ -16,11 +12,7 @@ public class Parallax : MonoBehaviour
    [SerializeField] bool followCamera;
     void Start()
     {
-<<<<<<< HEAD:ParryGame/Assets/Carlos/Scripts/Parallax.cs
-        character = followCamera?FindObjectOfType<Camera>().gameObject: Player_Controller.instance.gameObject;
-=======
         character = Camera.main.transform;
->>>>>>> NewMain:ParryGame/Assets/Master/Scripts/Envirorment/Parallax.cs
         m_startPoint = transform.position.x;
         m_lenght = GetComponent<SpriteRenderer>().bounds.size.x;
     }

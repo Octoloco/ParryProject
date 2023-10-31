@@ -2,10 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-<<<<<<< HEAD:ParryGame/Assets/Carlos/Editor/SoundEditor/SoundEventEditor.cs
-
-=======
->>>>>>> NewMain:ParryGame/Assets/Master/Scripts/Sound/SoundEventEditor.cs
 
 [CustomEditor(typeof(SoundEvent))]
 public class SoundEventEditor : Editor
