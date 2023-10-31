@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Pinata"))
         {
-            collision.gameObject.GetComponent<PiñataScript>().Grow();
+            collision.gameObject.GetComponent<PinataScript>().Grow();
         }
 
         trail.Stop();
@@ -44,7 +44,7 @@ public class Bullet : MonoBehaviour
 
     IEnumerator DestroyBullet()
     {
-        yield return new WaitForSeconds(explotion.startLifetime);
+        yield return new WaitForSeconds(explotion.main.startLifetimeMultiplier);
         Destroy(gameObject);
     }
 }

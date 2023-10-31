@@ -20,7 +20,7 @@ public class CannonRotation : MonoBehaviour
                 target = Player_Controller.instance.gameObject;
                 break;
             case TorretTargetType.BELL:
-                target = PiñataScript.instance.gameObject;
+                target = PinataScript.instance.gameObject;
                 break;
             case TorretTargetType.CUSTOM:
                 target = referenceTarget;

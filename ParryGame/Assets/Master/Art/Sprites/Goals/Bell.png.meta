@@ -111,7 +111,7 @@ TextureImporter:
       213: -4326471576631089243
     second: Bell_35
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -128,10 +128,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -170,6 +172,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -181,6 +185,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -193,6 +198,33 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -964,9 +996,45 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Bell_20: -5708314966141244622
+      Bell_21: -8346353235634046194
+      Bell_22: 3019778346069498545
+      Bell_23: 8652569084405809169
+      Bell_24: 1315775637554492464
+      Bell_25: -6446696889076922660
+      Bell_26: -2543639343371116661
+      Bell_27: 5059685901362791452
+      Bell_28: 5577946669698276956
+      Bell_29: 3106131952138592918
+      Bell_30: 801606778238247326
+      Bell_31: 8463763418618195577
+      Bell_32: -5942396765780658617
+      Bell_33: 5681833893655960705
+      Bell_34: -1880026343944332281
+      Bell_35: -4326471576631089243
+      HitBell_0: 4169699516828642862
+      HitBell_1: -2963174702864144119
+      HitBell_10: -9200418907024884549
+      HitBell_11: 2802515496455016519
+      HitBell_12: 3227026723898450575
+      HitBell_13: 1132472349923708792
+      HitBell_14: -8032623860982047174
+      HitBell_15: 831347183668742238
+      HitBell_16: 6642780059301477322
+      HitBell_17: 2805358985548469887
+      HitBell_18: -5896508714423820880
+      HitBell_19: 5407837819528913008
+      HitBell_2: -7831884239907893924
+      HitBell_3: 125391835932820309
+      HitBell_4: 3650359422548270077
+      HitBell_5: -7863436975713877026
+      HitBell_6: 4511945639411484277
+      HitBell_7: -4198883235668059461
+      HitBell_8: 6261047046930716513
+      HitBell_9: 5918136912733210232
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

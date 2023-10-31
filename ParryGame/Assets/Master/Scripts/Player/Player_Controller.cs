@@ -40,7 +40,7 @@ public class Player_Controller : MonoBehaviour
     private float pushOffDirection;
     private bool parrying = false;
     private Animator animator;
-    private SpriteRenderer renderer;
+    private SpriteRenderer spriteRenderer;
     private bool falling;
 
     [Header("On hit player variables")]
@@ -56,7 +56,7 @@ public class Player_Controller : MonoBehaviour
         {
             Destroy(this);
         }
-        renderer = GetComponentInChildren<SpriteRenderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponentInChildren<Animator>();
         initialGravity = Physics2D.gravity;
         rb = GetComponent<Rigidbody2D>();
@@ -142,12 +142,12 @@ public class Player_Controller : MonoBehaviour
     {
         if (movement.ReadValue<float>() > .3)
         {
-            renderer.flipX = false;
+            spriteRenderer.flipX = false;
             animator.SetBool("running", true);
         }
         else if (movement.ReadValue<float>() < -.3)
         {
-            renderer.flipX = true;
+            spriteRenderer.flipX = true;
             animator.SetBool("running", true);
         }
         else

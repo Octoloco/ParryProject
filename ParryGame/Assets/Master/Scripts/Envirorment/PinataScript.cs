@@ -4,10 +4,10 @@ using UnityEngine.Events;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PiñataScript : MonoBehaviour
+public class PinataScript : MonoBehaviour
 {
 
-    public static PiñataScript instance;
+    public static PinataScript instance;
 
     //[SerializeField]
     //private Transform[] quadrants;
